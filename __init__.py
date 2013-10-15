@@ -1,1 +1,1 @@
-__all__ = ['python', 'json']
+#__all__ = ['configurator_python', 'configurator_json']
