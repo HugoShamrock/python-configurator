@@ -3,7 +3,7 @@
 import imp
 import os
 
-def read(filename):
+def load(filename):
     if os.path.exists(filename):
         module = imp.load_source('virtual', filename)
         config = {
