@@ -8,6 +8,6 @@ def load(filename):
         with open(filename, mode='rb') as f:
             return pickle.load(f)
 
-def dump(filename, config):
+def dump(filename, config, protocol=0):
     with open(filename, mode='wb') as f:
-        pickle.dump(config, f)
+        pickle.dump(config, f, protocol)
