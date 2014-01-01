@@ -21,6 +21,8 @@ if __name__ == '__main__':
     #group.add_argument('-v', '--verbose', action='count')
     parser.add_argument('source_filename', help='source filename')
     parser.add_argument('target_filename', help='target filename')
+    #parser.add_argument('source_filename', nargs='?', type=argparse.FileType('r'), default=sys.stdin)
+    #parser.add_argument('target_filename', nargs='?', type=argparse.FileType('w'), default=sys.stdout)
     #parser.print_help()
     args = parser.parse_args()
     #args = parser.parse_args('-s python -t python'.split()) # source_format='python', target_format='python'
