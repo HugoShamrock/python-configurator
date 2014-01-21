@@ -5,10 +5,12 @@ import importlib
 
 class convertor():
 
-    def __init__(self, source_format, target_format, source_filename, target_filename):
-        self.source = importlib.import_module('configurator.{}'.format(source_format))
-        self.target = importlib.import_module('configurator.{}'.format(target_format))
+    def __init__(self, source_filename, source_format='python', target_format='json', target_filename=False, debug=False):
+        if not target_filename: target_filename = '{}.{}'.format(source_filename, target_format)
+        self.source = importlib.import_module('configurator.format.{}'.format(source_format))
+        self.target = importlib.import_module('configurator.format.{}'.format(target_format))
         config = self.source.load(source_filename)
+        if debug: print(config)
         self.target.dump(target_filename, config)
 
 if __name__ == '__main__':
@@ -29,4 +31,4 @@ if __name__ == '__main__':
     #args = parser.parse_args('-d'.split()) # debug=True
     #args = parser.parse_args('-vvv'.split()) # verbose=3
     #if args.debug or args.verbose: print(args)
-    convertor(args.source_format, args.target_format, args.source_filename, args.target_filename)
+    convertor(args.source_filename, args.source_format, args.target_format, args.target_filename)
