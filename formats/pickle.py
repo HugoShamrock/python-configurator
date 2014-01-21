@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import configurator.format._safe_importer
+import configurator.formats._safe_importer
 import os
 import pickle
 
