@@ -6,8 +6,8 @@ import importlib
 class convertor():
 
     def __init__(self, source_format, target_format, source_filename, target_filename):
-        self.source = importlib.import_module('configurator.formats.{}'.format(source_format))
-        self.target = importlib.import_module('configurator.formats.{}'.format(target_format))
+        self.source = importlib.import_module('configurator.{}'.format(source_format))
+        self.target = importlib.import_module('configurator.{}'.format(target_format))
         config = self.source.load(source_filename)
         self.target.dump(target_filename, config)
 
