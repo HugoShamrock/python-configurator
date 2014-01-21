@@ -13,4 +13,4 @@ def load(filename):
 
 def dump(filename, config, indent=default_indent):
     with open(filename, mode='w') as f:
-        json.dump(config, f, indent)
+        json.dump(config, f, indent=indent)
