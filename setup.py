@@ -6,7 +6,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name = 'configurator',
+    name = 'python-configurator',
     version = '0.2',
     description = 'Python module for reading configuration files in different formats',
     long_description = open('README.rst').read() + '\n' + open('CHANGES.rst').read(),
