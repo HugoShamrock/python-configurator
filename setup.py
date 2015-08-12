@@ -10,9 +10,9 @@ setup(
     version = '0.2',
     description = 'Python module for reading configuration files in different formats',
     long_description = open('README.rst').read() + '\n' + open('CHANGES.rst').read(),
-    author = 'GNU Knight',
-    author_email = 'idxxx23@gmail.com',
-    url = 'https://github.com/idxxx23/configurator',
+    author = 'Hugo Shamrock',
+    author_email = 'hugo.shamrock@gmail.com',
+    url = 'https://github.com/HugoShamrock/python-configurator',
     packages = ['configurator'],
     classifiers = [ # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Programming Language :: Python :: 3',
