@@ -6,10 +6,12 @@ import pickle
 
 default_protocol = 0
 
+
 def load(filename):
     if os.path.exists(filename):
         with open(filename, mode='rb') as f:
             return pickle.load(f)
+
 
 def dump(filename, config, protocol=default_protocol):
     with open(filename, mode='wb') as f:

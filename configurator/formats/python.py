@@ -4,6 +4,7 @@ import configurator.formats._safe_importer
 import os
 import imp
 
+
 def load(filename):
     if os.path.exists(filename):
         module = imp.load_source('virtual', filename)
@@ -14,7 +15,8 @@ def load(filename):
         }
         return config
 
-def dump(filename, config): # beta ~> without recursion ;)
+
+def dump(filename, config):  # beta ~> without recursion ;)
     with open(filename, mode='w') as f:
         f.write('#!/usr/bin/env python3\n\n')
         for key, value in config.items():
