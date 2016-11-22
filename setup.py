@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
+
+import configurator
+
+long_description = open('README.rst').read() + '\n' + open('CHANGES.rst').read()
 
 setup(
     name='python-configurator',
-    version='0.3',
+    version=configurator.__version__,
     description='Python module for reading configuration files in different formats',
-    long_description=open('README.rst').read() + '\n' + open('CHANGES.rst').read(),
+    long_description=long_description,
     author='Hugo Shamrock',
     author_email='hugo.shamrock@gmail.com',
     url='https://github.com/HugoShamrock/python-configurator',
