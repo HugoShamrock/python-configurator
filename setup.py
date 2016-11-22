@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='python-configurator',
-    version='0.2',
+    version='0.3',
     description='Python module for reading configuration files in different formats',
     long_description=open('README.rst').read() + '\n' + open('CHANGES.rst').read(),
     author='Hugo Shamrock',

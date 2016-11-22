@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3 (2016 Nov 22)
+
+* modify the source code by pep8
+* sort json.dump file
+* add extension parameter
+
 0.2 (2015 Jan 16)
 
 * create 'configurator' package
